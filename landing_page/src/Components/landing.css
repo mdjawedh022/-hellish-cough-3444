@@ -1,0 +1,267 @@
+
+/* Top Section  */
+
+.j-banner {
+    margin-top: 15px;
+    width: 100%;
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img0m.jpg");
+    min-height: 85vh;
+    background-size: cover;
+  }
+  .j-tags {
+    color: white;
+    text-align: center;
+    padding-top: 16%;
+  }
+  .j-tags h1 {
+    font-size: 55px;
+    font-weight: 350;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .j-tags p {
+    margin-top: 10px;
+    font-size: 17px;
+  }
+  
+  .j-tag {
+    margin-top: 25px;
+    text-align: center;
+  }
+  .j-tag button {
+    margin: 0 15px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 1px;
+    background-color: white;
+  }
+  /* .................................................. */
+  .j-shop {
+    text-align: center;
+    width: 85%;
+    height: 1900px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    /* padding-top: 90%;  */
+  }
+  .j-shop a {
+    border-bottom: solid;
+    /* border:solid; */
+    color: white;
+    /* margin-top:40px; */
+  }
+  .j-shop h1 {
+    /* font-family: Courier, monospace; */
+    width: 90%;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 480px;
+  }
+  .j-shop1 {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img1_new.jpg");
+    background-size: cover;
+  }
+  .j-shop2 {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img2_new.jpg");
+    background-size: cover;
+  }
+  .j-shop3 {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img3.jpg");
+    background-size: cover;
+  }
+  .j-shop4 {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img4.jpg");
+    background-size: cover;
+  }
+  .j-shop5 {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img5.jpg");
+    background-size: cover;
+  }
+  .j-shop6 {
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img6.jpg");
+    background-size: cover;
+  }
+  .j-shop5 {
+    color: black;
+  }
+  .j-shop5 a {
+    color: black;
+    border-bottom: solid;
+  }
+  /* ................................ */
+  .j-button {
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .j-button h1 {
+    font-size: 35px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 350;
+  }
+  .j-button button {
+    background: white;
+    padding: 13px 30px;
+    font-weight: 550;
+    border: 1px solid rgb(171, 167, 167);
+    cursor: pointer;
+  }
+  .j-button button:hover {
+    color: white;
+    background-color: gray;
+  }
+  
+  /* @media only screen and (min-width: 768px) */
+  .j-collective {
+    background-color: #f8f4ef;
+    width: 100%;
+    height: 1600px;
+    padding-top: 20px;
+  }
+  .j-collective-box {
+    width: 75%;
+    margin: auto;
+    /* border: solid; */
+  }
+  .j-collective-box img {
+    width: 22%;
+    margin-top: 30px;
+  }
+  .j-collective-box span {
+    font-weight: 700;
+    margin-left: 53%;
+  }
+  .j-collective-box1 {
+    width: 75%;
+    margin: 40px auto;
+    padding-top: 1px;
+    border-top: solid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .j-collective-box1 img {
+    width: 100%;
+  }
+  .j-collective-box1 h1 {
+    font-weight: 400;
+    font-size: 25px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .j-collective-box1 a {
+    color: black;
+    border-bottom: solid;
+    font-weight: 600;
+  }
+  
+  .j-stories {
+    width: 75%;
+    margin: 20px auto;
+    /* border: solid; */
+  }
+  .j-stories .j-more {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 45px;
+    font-weight: 400;
+  }
+  .j-stories-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .j-stories-main img {
+    width: 100%;
+  }
+  .j-stories-main a {
+    color: black;
+    font-weight: 600;
+    border-bottom: solid;
+  }
+  .j-stories-main h2 {
+    font-weight: 370;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .j-love-section {
+    width: 90%;
+    margin: 90px auto 0 auto;
+    height: 450px;
+    /* border: solid; */
+  }
+  .j-love-section-main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+  .Love {
+    font-size: 40px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+  }
+  /* -----------------slider---------- */
+
+  /* style={{ width: "100%" ,height:"140px", margin: "auto",background:"white" }} */
+
+  /* .j-slider{
+    border: solid;
+  } */
+  .j-increw{
+    text-align: center;
+    margin-top: 20px;
+    
+    
+  }
+  .j-slider-increw{
+    width: 98%;
+    margin: auto;
+  }
+  .j-slider img{
+    /* width: 100%; */
+    height: 350px;   
+  }
+  .j-increw h1{
+    font-size: 40px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .j-increw p{
+    margin-top: -1%;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+  .d_append_data{
+    margin: 5%;
+  }
+  /* ..........................seeMore.......................... */
+  .j-see-more-main{
+    width: 95%;
+    margin:70px auto 30px auto;
+   
+  }
+  .j-see-more-present{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:20px;
+    
+  }
+  .j-see-more-present a{
+    font-size: 14px;
+    border-bottom:1px solid gray;
+  }
+  .j-see-more-main h1{
+    font-size: 30px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+  }
+  /* .....................recently....................... */
+  .j-recently{
+
+  }
