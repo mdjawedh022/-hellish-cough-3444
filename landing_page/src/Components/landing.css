@@ -192,8 +192,8 @@
   .j-love-section {
     width: 90%;
     margin: 90px auto 0 auto;
-    height: 500px;
-    border: solid;
+    height: 450px;
+    /* border: solid; */
   }
   .j-love-section-main {
     display: grid;
@@ -205,4 +205,63 @@
     text-align: center;
     font-family: "Times New Roman", Times, serif;
   }
-  
+  /* -----------------slider---------- */
+
+  /* style={{ width: "100%" ,height:"140px", margin: "auto",background:"white" }} */
+
+  /* .j-slider{
+    border: solid;
+  } */
+  .j-increw{
+    text-align: center;
+    margin-top: 20px;
+    
+    
+  }
+  .j-slider-increw{
+    width: 98%;
+    margin: auto;
+  }
+  .j-slider img{
+    /* width: 100%; */
+    height: 350px;   
+  }
+  .j-increw h1{
+    font-size: 40px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .j-increw p{
+    margin-top: -1%;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+  .d_append_data{
+    margin: 5%;
+  }
+  /* ..........................seeMore.......................... */
+  .j-see-more-main{
+    width: 95%;
+    margin:70px auto 30px auto;
+   
+  }
+  .j-see-more-present{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:20px;
+    
+  }
+  .j-see-more-present a{
+    font-size: 14px;
+    border-bottom:1px solid gray;
+  }
+  .j-see-more-main h1{
+    font-size: 30px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+  }
+  /* .....................recently....................... */
+  .j-recently{
+
+  }

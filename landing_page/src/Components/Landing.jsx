@@ -1,13 +1,17 @@
-import React, { useState } from "react";
-// import  "./langing.css"
-// import stylea from './'
-import "../Components/landing.css"
+import "../Components/landing.css";
 import { Link } from "react-router-dom";
-// import { BsHeartFill, BsHeart } from "react-icons/bs";
-// import { Flex, Slider } from "@chakra-ui/react";
-import { Slider } from "./Slider";
+import Slider from "./Slider";
+import SeeMore from "../ImageUrl/SeeMore";
+import { useState } from "react";
+import loveSection from "../ImageUrl/loveSection";
+import Stories from "../ImageUrl/Stories";
+import collective from "../ImageUrl/collective";
+
 function Landing() {
-  const [liked, setLiked] = useState(false);
+  const [data, setData] = useState(SeeMore);
+  const [love,setLove]=useState(loveSection);
+  const [store,setStore]=useState(Stories)
+  const [collect,setCollect]=useState(collective)
   return (
     <>
       <div>
@@ -91,33 +95,18 @@ function Landing() {
           </div>
           <div className="j-collective-box1">
             {/* -------------------collective_section_1----------------------------------- */}
-            <div>
-              <img
-                src="https://www.jcrew.com/brand_creative/homepage2022/11-Nov/2022nov_1025_hp_w_img12.jpg"
-                alt=""
-              />
-              <p>Creative Spirits Series</p>
-              <h1>Marie Marot X J.Crew</h1>
-              <Link to="">Shop our collab</Link>
-            </div>
-            <div>
-              <img
-                src="https://www.jcrew.com/brand_creative/homepage2022/10-Oct/2022oct_0927_hp_w_img7.jpg"
-                alt=""
-              />
-              <p>That fall feeling</p>
-              <h1>Layer love with Marjon Carlos</h1>
-              <Link to="">Shop her story</Link>
-            </div>
-            <div>
-              <img
-                src="https://www.jcrew.com/brand_creative/homepage2022/10-Oct/2022oct_0927_hp_w_img8.jpg"
-                alt=""
-              />
-              <p>Heritage made modern</p>
-              <h1>A Cashmere Remix with Lucy Williams</h1>
-              <Link to="">Shop her story</Link>
-            </div>
+           
+           {collect.map((elem)=>(
+             <div>
+             <img
+               src={elem.img}
+               alt=""
+             />
+             <p>{elem.ptag}</p>
+             <h1>{elem.h1tag}</h1>
+             <Link to="">{elem.link}</Link>
+           </div>
+           ))}
           </div>
 
           {/* ------------------------Stories-------------------- */}
@@ -126,40 +115,11 @@ function Landing() {
               <h1 className="j-more">More Stories</h1>
             </div>
             <div className="j-stories-main">
-              <div>
-                <img
-                  src="https://www.jcrew.com/brand_creative/homepage2022/14-Dec3/gifcyb_w_agnetha.jpg"
-                  alt=""
-                />
-                <h2>
-                  Most wanted:limited-edition Barbour X J.Crew Agnetha jacket
-                </h2>
-                <Link to="">Get a closer look</Link>
-              </div>
-              <div>
-                <img
-                  src="https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img9.jpg"
-                  alt=""
-                />
-                <h2>The edit:tartan time</h2>
-                <Link to="">Shop the festive roundup</Link>
-              </div>
-              <div>
-                <img
-                  src="https://www.jcrew.com/brand_creative/homepage2022/11-Nov/2022nov_1025_hp_w_img10.jpg"
-                  alt=""
-                />
-                <h2>Olympia's picks</h2>
-                <Link to="">Shop her December edit</Link>
-              </div>
-              <div>
-                <img
-                  src="https://www.jcrew.com/brand_creative/homepage2022/12-Dec/2022dec_1108_hp_w_img11.jpg"
-                  alt=""
-                />
-                <h2>Design Try-on:the Holiday Collection</h2>
-                <Link to="">Shop the video</Link>
-              </div>
+            {store.map((elem)=>(
+              <div><img src={elem.img} alt="" />
+              <h1>{elem.title}</h1>
+              <Link>{elem.link}</Link></div>
+            ))}
             </div>
           </div>
         </div>
@@ -171,64 +131,44 @@ function Landing() {
             <h2 className="Love">You'll Also Love</h2>
           </div>
           <div className="j-love-section-main">
-            <div>
-              <img
-                src="https://www.jcrew.com/s7-img-facade/BM543_BK0001?wid=376"
-                alt=""
-              />{" "}
-            </div>
-            <div>
-              <img
-                src="https://www.jcrew.com/s7-img-facade/BA538_BK0001_m?wid=376"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://www.jcrew.com/s7-img-facade/BB984_BR6887?wid=376"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://www.jcrew.com/s7-img-facade/AU763_WX0651?wid=376"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://www.jcrew.com/s7-img-facade/AZ516_EE0404_m?wid=376"
-                alt=""
-              />
-            </div>
+           {love.map((elem)=>(
+            <div><img src={elem.img} alt="" /></div>
+           ))}
           </div>
         </div>
 
-{/* -------------------------------------------------Carousel----------------------------------- */}
+        {/* -------------------------------------------------Carousel----------------------------------- */}
 
-<div>
-  <Slider/>
-</div>
+        <div className="j-slider-increw">
+          <div className="j-increw">
+            <h1>Shop our Instagram</h1>
+            <br />
+            <p>(and join the fun with #injcrew)</p>
+          </div>
+          <Slider />
+        </div>
 
+        {/* ---------------------------SeeMore----------------------------------- */}
+        <div className="j-see-more-main">
+          <h1>More you need to see</h1>
+          <div className="j-see-more-present">
+            {data.map((elem) => (
+              <div className="j-seeMore">
+                <img src={elem.img} alt="" />
+                <Link>{elem.title}</Link>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* -----------------------recentlysection------------------ */}
+        <div className="j-recently">
+         
+        </div>
       </div>
     </>
   );
 }
 
 export default Landing;
-{
-  /* <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            borderLeft={'1px'}
-            cursor="pointer"
-            onClick={() => setLiked(!liked)}>
-            {liked ? (
-              <BsHeartFill fill="red" fontSize={'24px'} />
-            ) : (
-              <BsHeart fontSize={'24px'} />
-            )}
-          </Flex> */
-}
+
