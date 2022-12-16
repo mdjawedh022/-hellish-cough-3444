@@ -1,6 +1,6 @@
-import "../Components/landing.css";
+import "../Style/landing.css";
 import { Link } from "react-router-dom";
-import Slider from "./Slider";
+import Slider from "../Components/Slider";
 import SeeMore from "../ImageUrl/SeeMore";
 import { useState } from "react";
 import loveSection from "../ImageUrl/loveSection";
