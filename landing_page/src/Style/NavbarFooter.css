@@ -1,0 +1,202 @@
+.j-navbar{
+    width: 100%;display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 0.5px solid rgb(215, 212, 212);
+     padding:5px;
+}
+/* .j-navbar div{
+    /* border:1px solid red */
+
+.j-logo{
+    margin-left: 2%;
+    font-size: 35px;
+
+    font-family: "Times New Roman", Times, serif;
+}
+.j-product-navbar{
+    display:flex;
+    align-items: center;
+    gap:20px;
+    margin-left: 5%;
+}
+.j-product-navbar a{
+    font-weight: 600;
+    font-size: 15px;
+
+}
+.j-product-navbar a:hover{
+    /* border-bottom: 1px solid red; */
+    padding-bottom: 20px;
+}
+.j-input-navbar input{
+    outline: none;
+    margin-left: 5px;
+}
+.j-input-navbar{
+    border:1px solid rgb(154, 152, 152);
+    padding: 7px 10px;
+    /* margin-right:5%; */
+}
+.j-signIn-navbar{
+    display: flex;
+    align-items: center;
+    /* border: solid; */
+    gap:30px;
+   margin-right:5%;  
+
+}
+.j-navbar-logo-main{
+    display: flex;
+    padding:0 10px;
+}
+
+/* ................ */
+
+.j-navbar-second-div{
+    width: 100%;
+    text-align: center;
+   
+}
+.j-navbar-second-div p{
+    margin: 25px auto;
+}
+
+.j-iconbutton{
+    display: none;
+}
+
+/* ----------------------Footer--------------- */
+.j-footer-main{
+    width: 100%;
+    border-top: 1px solid rgb(154, 152, 152);
+    margin: 20px auto;
+}
+.j-footer-main-logo{
+    margin:10px auto; 
+    width: 30%;
+    /* border: solid; */
+    text-align: center;
+}
+.j-footer-main-logo a{
+    padding:5px 13px;
+    gap: 10px;
+}
+
+.j-footer-parent{
+    width: 100%;
+    background-color: rgb(233, 236, 236);
+    height:650px;
+    padding-top:40px;
+ 
+}
+.j-footer-child{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,55% 30%);
+    gap: 15%;
+}
+/* .j-footer-parent div{
+    border: 1px solid black;
+
+} */
+
+
+.j-like-section input{
+border:1px solid black;
+padding-left:5px;
+padding-top:5px ;
+padding-bottom:5px;
+padding-right:85px;
+outline: none;
+}
+.j-like-section button{
+    padding:5px 10px;
+    background-color: black;
+    color: white;
+    font-weight:450;
+    border:1px solid black;
+}
+.j-p-get{
+    margin-top: -4%;
+    margin-bottom: 1%;
+}
+/* ............................. */
+
+.footer-write{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:60px;
+}
+.footer-write p{
+    font-weight: 600;
+}
+.footer-write ul{
+    font-size: 13px;
+    font-weight: 550;
+    margin-bottom: 5px;
+}
+/* .footer-write ul:hover{
+padding-top:2px ;
+} */
+.j-secial-media{
+    display: flex;
+    gap:20px
+}.j-social-section{
+    margin-top: 20px;
+   
+}
+.j-social-section .fa-brands{
+    font-size: 27px;
+    
+   
+}
+.j-madewrll{
+    display: flex;
+    gap:30px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.j-india{
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+.j-footer-parent ul,p,h2{
+cursor: pointer;
+}
+/* @media only screen and (min-width: 768px) {
+   
+}
+@media (max-width:958px){
+    .j-navbar{
+        width: 100%;
+        display: flex;
+    }
+   
+    .j-signIn-navbar{
+        display: flex;
+        align-items: center;
+        /* border: solid; */
+        /* gap:20px;
+       margin-right:5%;  
+    
+    }
+    .j-logo a{
+        margin-left: 2%;
+        font-size: 2px;
+    
+        /* font-family: "Times New Roman", Times, serif; */
+    /* }
+    
+} */ 
+
+
+
+
+
+
+
+
+

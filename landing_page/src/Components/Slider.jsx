@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import Carousel from "react-elastic-carousel";
-import "../Components/landing.css";
+import "../Style/landing.css";
 
 const append = [
   {
