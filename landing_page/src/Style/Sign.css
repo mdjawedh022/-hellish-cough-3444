@@ -1,0 +1,120 @@
+form{
+    width: 27%;
+    margin: auto;
+    box-shadow: rgba(236, 11, 11, 0.24) 0px 3px 8px;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+ form input{
+border: 1px solid gray;
+padding: 7px 10px;
+width: 99%;
+margin-top: 18px;
+outline: none;
+border-radius:4px ;
+
+}
+form select{
+    border: 1px solid gray;
+padding: 7px 70px;
+margin-top: 15px;
+}
+.j-sign-form{
+    border: 1px solid gray;
+   width: 98%;
+   padding-top: 7px;
+   padding-bottom: 6px;
+   margin: 10px auto;
+   background-color: black;
+   color:white;
+   font-weight: 600;
+   font-size: 15px;
+   /* border-radius:4px ; */
+}
+.j-an-account{
+    display: flex;
+    margin-top: 20px;
+}
+.j-an-account a{
+    color:blue
+}
+.j-reCAPTCHA{
+    margin: 10px auto 30px auto;
+}
+form>h1{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+.j-remember-me{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.j-remember-me a{
+    color: blue;
+}
+
+@media screen and (max-width:1197px){
+    form{
+        width: 41%;
+        margin: auto;
+        padding: 20px 30px;
+    }
+    .j-sign-form{
+        width: 98%;
+    }
+}
+@media screen and (max-width:998px){
+    form{
+        width: 47%;
+        margin: auto;
+        padding: 20px 30px;
+    }
+    form input{
+        border: 1px solid gray;
+        padding: 5px 10px;
+        width: 99%;
+    }
+    .j-remember-me{
+        display: flex;
+       gap:10px;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    .j-sign-form{
+        width: 98%;
+    }
+}
+@media screen and (max-width:662px){
+    .j-sign-form{
+        width: 98%;
+    }
+    form{
+        width: 67%;
+        margin: auto;
+        padding: 20px 30px;
+    }
+}
+@media screen and (max-width:555px){
+    .j-sign-form{
+        width: 98%;
+    }
+    form{
+        width: 77%;
+        margin: auto;
+        padding: 20px 30px;
+    }
+}
+@media screen and (max-width:470px){
+    .j-sign-form{
+        width: 98%;
+    }
+    form{
+        width: 77%;
+        margin: auto;
+        padding: 20px 30px;
+    }
+}

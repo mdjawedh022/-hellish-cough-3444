@@ -4,14 +4,14 @@ import "../Style/NavbarFooter.css";
 
 function Footer() {
   return (
-    <div>
+    <div className="j-main-footer">
       <div className="j-footer-main">
         <div className="j-footer-main-logo">
           <Link>
             <i className="fa-brands fa-twitter"></i> @j.crew_help
           </Link>
           <Link>
-            <i className="fa-solid fa-phone"></i> 1 434 385 5775p
+            <i className="fa-solid fa-phone"></i> 1 434 385 5775
           </Link>
           <Link>
             <i className="fa-sharp fa-solid fa-envelope"></i> Email Us
@@ -62,13 +62,13 @@ function Footer() {
                 <i className="fa-brands fa-youtube"></i>
                 </div>
                 <div>
-                    <div className="j-india"><Link>india</Link><img style={{width:"4%",height:"3%",marginTop:'5px'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKmVmquV0wSkDYeqg0tMMybLRjrbVMulw8Q&usqp=CAU" alt="" /></div>
+                    <div className="j-india"><Link>india</Link><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKmVmquV0wSkDYeqg0tMMybLRjrbVMulw8Q&usqp=CAU" alt="" /></div>
                    
                     <div className="j-madewrll">
                         <h2>madewrll</h2>
                         <h2>J.crew</h2>
                     </div>
-                    <p>© 2022 J.Crew</p>
+                    <p className="-JCrew">© 2022 J.Crew</p>
                 </div>
             </div>
           </div>

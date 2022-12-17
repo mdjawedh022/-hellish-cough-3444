@@ -1,0 +1,140 @@
+.j-men-page{
+    width: 100%;
+
+}
+.j-men-bannner{
+    margin-top: 15px;
+    width:90%;
+    margin: auto;
+    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img0m.jpg");
+    min-height: 65vh;
+    background-size: cover;
+    text-align: center;
+}
+.j-men-bannner h1{
+    font-size: 20%;
+    color: white;
+}
+.j-filters-section{
+    width: 90%;
+    /* border: solid; */
+    margin:50px auto 20px auto;
+
+}
+/* .................... */
+.j-filters-section-filters{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.j-filters-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.j-filter-number{
+    display: flex;
+    align-items: center;
+    gap:10px
+}
+.j-filter-pages-filter{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.j-filter-pages-filter select{
+    border: 1px solid gray;
+    outline: none;
+    padding:5px 3px;
+}
+.j-filters-section-filters select{
+    border: 1px solid gray;
+    outline: none;
+    padding:5px 3px;
+}
+.j-filters-section-filters option{
+    font-size: 14px;
+    font-weight: 600;
+   
+}
+/* ............................... */
+.j-men-section-data-append{
+width: 85%;
+margin:20px  auto;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap:20px;
+}
+.j-men-section-data:hover{
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.j-men-section-data{
+    cursor: pointer;
+    font-weight: 600;
+}
+.j-men-section-data img{
+    width: 100%;
+}
+.j-men-section-data h2{
+   
+    font-size: 20px;
+}
+.j-men-section-data h4,.j-elemsection{
+    color: gray;
+    font-size: 12px;
+}
+.j-orprice{
+    text-decoration: line-through;
+    color: red;
+}
+/* ---------------media-------------------- */
+
+
+@media screen and (max-width:768px){
+    .j-men-page{
+        width: 100%;
+    
+    }
+    .j-men-bannner{
+        width:90%;
+    margin: auto;
+    }
+    .j-filters-section{
+        width: 90%;
+        /* border: solid; */
+        margin:50px auto 20px auto;
+}
+.j-men-section-data-append{
+    width: 85%;
+margin:20px  auto;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap:20px;
+}
+}
+
+@media screen and (max-width:445px){
+    .j-men-page{
+        width: 100%;
+    
+    }
+    .j-men-bannner{
+        width:90%;
+    margin: auto;
+    }
+
+    .j-filters-section{
+        width: 90%;
+        /* border: solid; */
+        margin:50px auto 20px auto;
+}
+.j-men-section-data-append{
+    width:95%;
+margin:20px auto;
+display: grid;
+grid-template-columns: repeat(1,1fr);
+/* gap:20px; */
+}
+
+}
