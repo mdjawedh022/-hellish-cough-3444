@@ -4,6 +4,18 @@
      align-items: center;
      border-bottom: 0.5px solid rgb(215, 212, 212);
      padding:5px;
+     position: fixed;
+     /* z-index: 0; */
+     background-color:white;
+     /* margin-top: -2%;margin-bottom: 19%; */
+}
+.j-main-navbar-section{
+   
+    width: 100%;
+   
+}
+.j-navbar-second-div{
+    padding-top: 3.5%;
 }
 /* .j-navbar div{
     /* border:1px solid red */
@@ -65,7 +77,9 @@
 .j-iconbutton{
     display: none;
 }
-
+.fa-bag-shopping{
+    font-size: 28px;
+}
 /* ----------------------Footer--------------- */
 .j-footer-main{
     width: 100%;
@@ -86,7 +100,7 @@
 .j-footer-parent{
     width: 100%;
     background-color: rgb(233, 236, 236);
-    height:650px;
+    height:600px;
     padding-top:40px;
  
 }
@@ -129,6 +143,11 @@ outline: none;
     grid-template-columns: repeat(3,1fr);
     gap:60px;
 }
+.j-india img{
+width: 4%;
+height: 3%;
+margin-top: 5px;
+}
 .footer-write p{
     font-weight: 600;
 }
@@ -166,36 +185,100 @@ padding-top:2px ;
 .j-footer-parent ul,p,h2{
 cursor: pointer;
 }
-/* @media only screen and (min-width: 768px) {
+   
+
+@media screen and (max-width:1128px){
+    .j-product-navbar{
+        display:none;
+    }
+    .j-iconbutton{
+        display: block;
+    }
+    .j-input-navbar{
+        display: none;
+    }
+    .sigin-j-button{
+        display: none;
+    }
+    .j-main-footer{
+        width: 100%;
+    }
+    .j-footer-main-logo{
+        width: 50%;
+        font-size: 15px;
+    }
+    .j-like-section input{
+        
+        padding-left:0px;
+        padding-top:5px ;
+        padding-bottom:5px;
+        padding-right:2px;
+        outline: none;
+        }
+        .j-iconbutton span{
+            margin-left: 30%;
+            align-items: center;
+        }
+        .j-main-navbar-section{
+            margin-top:-1.8%;
+        }
+}
+@media screen and (max-width:768px) {
+    .j-product-navbar{
+        display:none;
+    }
+    .j-footer-main-logo{
+        width: 80%;
+        font-size: 12px;
+    }
+    .j-footer-parent{
+        display: flex;
+        height: auto;
+    }
+    .j-like-section{
+        display: none;
+    }
+    .j-footer-child{
+        /* border: solid; */
+        margin-left: 20%;
+    }
    
 }
-@media (max-width:958px){
-    .j-navbar{
+@media screen and (max-width:445px){
+    .j-main-navbar-section{
+        margin-top:-3.5%;
+    }
+    .j-footer-main-logo{
         width: 100%;
-        display: flex;
+        font-size: 15px;
     }
-   
-    .j-signIn-navbar{
-        display: flex;
-        align-items: center;
-        /* border: solid; */
-        /* gap:20px;
-       margin-right:5%;  
     
+    .j-social-section{
+      padding-left: 30px;
+     
     }
-    .j-logo a{
-        margin-left: 2%;
-        font-size: 2px;
-    
-        /* font-family: "Times New Roman", Times, serif; */
-    /* }
-    
-} */ 
-
-
-
-
-
+    .j-india a,.j-madewrll{
+        font-size:20px;
+        
+    }
+ .-JCrew {
+        margin-left: 35%;
+    }
+    .j-india{
+        margin-left:40%;
+    }
+    .j-madewrll{
+        margin-left: 25%;
+    }
+    .j-india img{
+        width:25%;
+    }
+    .j-footer-child{
+        /* margin-left:1px;
+         */
+         margin: auto;
+    }
+}
 
 
 

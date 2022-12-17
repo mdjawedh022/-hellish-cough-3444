@@ -9,12 +9,12 @@ import collective from "../ImageUrl/collective";
 
 function Landing() {
   const [data, setData] = useState(SeeMore);
-  const [love,setLove]=useState(loveSection);
-  const [store,setStore]=useState(Stories)
-  const [collect,setCollect]=useState(collective)
+  const [love, setLove] = useState(loveSection);
+  const [store, setStore] = useState(Stories);
+  const [collect, setCollect] = useState(collective);
   return (
     <>
-      <div>
+      <div className="j-landing-main">
         {/* ---------------banner--------------------- */}
         <div className="j-banner">
           <div className="j-tags">
@@ -24,15 +24,23 @@ function Landing() {
             </p>
           </div>
           <div className="j-tag">
-            <button>Shop for her</button>
-            <button>Shop for him</button>
-            <button>Shop for girls</button>
-            <button>Shop for boys</button>
-            <button>shop for the home</button>
+            <div className="j-link-button-grid">
+             
+                <button>Shop for her</button>
+             
+                <button>Shop for him</button>
+             
+                <button>Shop for girls</button>
+             
+                <button>Shop for boys</button>
+            
+                <button>shop for the home</button>
+             
+            </div>
           </div>
         </div>
         {/* ---------------------------shop------------------- */}
-        <div className="j-shop">
+        <div className="j-shop j-shop0">
           <div className="j-shop1">
             <h1>Going Somewhere snowy?</h1>
             <Link to="">Visit the Ski Shop</Link>
@@ -95,18 +103,15 @@ function Landing() {
           </div>
           <div className="j-collective-box1">
             {/* -------------------collective_section_1----------------------------------- */}
-           
-           {collect.map((elem)=>(
-             <div>
-             <img
-               src={elem.img}
-               alt=""
-             />
-             <p>{elem.ptag}</p>
-             <h1>{elem.h1tag}</h1>
-             <Link to="">{elem.link}</Link>
-           </div>
-           ))}
+
+            {collect.map((elem) => (
+              <div>
+                <img src={elem.img} alt="" />
+                <p>{elem.ptag}</p>
+                <h1>{elem.h1tag}</h1>
+                <Link to="">{elem.link}</Link>
+              </div>
+            ))}
           </div>
 
           {/* ------------------------Stories-------------------- */}
@@ -115,11 +120,13 @@ function Landing() {
               <h1 className="j-more">More Stories</h1>
             </div>
             <div className="j-stories-main">
-            {store.map((elem)=>(
-              <div><img src={elem.img} alt="" />
-              <h1>{elem.title}</h1>
-              <Link>{elem.link}</Link></div>
-            ))}
+              {store.map((elem) => (
+                <div>
+                  <img src={elem.img} alt="" />
+                  <h1>{elem.title}</h1>
+                  <Link>{elem.link}</Link>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -131,9 +138,11 @@ function Landing() {
             <h2 className="Love">You'll Also Love</h2>
           </div>
           <div className="j-love-section-main">
-           {love.map((elem)=>(
-            <div><img src={elem.img} alt="" /></div>
-           ))}
+            {love.map((elem) => (
+              <div>
+                <img src={elem.img} alt="" />
+              </div>
+            ))}
           </div>
         </div>
 
@@ -145,7 +154,9 @@ function Landing() {
             <br />
             <p>(and join the fun with #injcrew)</p>
           </div>
-          <Slider />
+          <div>
+            <Slider />
+          </div>
         </div>
 
         {/* ---------------------------SeeMore----------------------------------- */}
@@ -162,13 +173,10 @@ function Landing() {
         </div>
 
         {/* -----------------------recentlysection------------------ */}
-        <div className="j-recently">
-         
-        </div>
+        <div className="j-recently"></div>
       </div>
     </>
   );
 }
 
 export default Landing;
-
