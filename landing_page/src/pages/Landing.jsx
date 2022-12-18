@@ -1,5 +1,5 @@
 import "../Style/landing.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Slider from "../Components/Slider";
 import SeeMore from "../ImageUrl/SeeMore";
 import { useState } from "react";
@@ -12,6 +12,14 @@ function Landing() {
   const [love, setLove] = useState(loveSection);
   const [store, setStore] = useState(Stories);
   const [collect, setCollect] = useState(collective);
+  const navigate = useNavigate();
+
+  const handlefemale=()=>{
+    navigate("./homewomen")
+  }
+  const handlemale=()=>{
+    navigate('./homemen')
+  }
   return (
     <>
       <div className="j-landing-main">
@@ -26,9 +34,9 @@ function Landing() {
           <div className="j-tag">
             <div className="j-link-button-grid">
              
-                <button>Shop for her</button>
+                <button onClick={handlefemale}>Shop for her</button>
              
-                <button>Shop for him</button>
+                <button onClick={handlemale}>Shop for him</button>
              
                 <button>Shop for girls</button>
              
@@ -40,7 +48,7 @@ function Landing() {
           </div>
         </div>
         {/* ---------------------------shop------------------- */}
-        <div className="j-shop j-shop0">
+        <div className="j-shop">
           <div className="j-shop1">
             <h1>Going Somewhere snowy?</h1>
             <Link to="">Visit the Ski Shop</Link>
@@ -74,7 +82,7 @@ function Landing() {
         {/* ------------------------collective------------------------------- */}
 
         <div className="j-button">
-          <h1>Shop New Arriavals</h1>
+        <h1>Shop New Arriavals</h1>
           <Link to="">
             {" "}
             <button>Shop Women</button>
