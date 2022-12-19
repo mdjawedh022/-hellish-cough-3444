@@ -7,7 +7,7 @@ function SignIn() {
   const jawed_data = JSON.parse(localStorage.getItem("jawed_Signin"));
   console.log(jawed_data);
   const [jawedsignin, setjawedsignin] = useState({});
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   const handlechange = (e) => {
     setjawedsignin({ ...jawedsignin, [e.target.name]: e.target.value });
   };
@@ -22,7 +22,8 @@ function SignIn() {
       alert("signin successful");
       localStorage.setItem("isSignIn", JSON.stringify({isSignIn:true,email:jawedsignin.email}))
       // setName(JSON.parse(localStorage.getItem("jawed_Signin")).name)
-      window.open("http://localhost:3000")
+      // window.open("http://localhost:3000")
+      navigate("/")
 
     } else {
       alert("Invaild password");

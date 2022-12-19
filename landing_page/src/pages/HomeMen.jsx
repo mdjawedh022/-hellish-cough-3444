@@ -4,8 +4,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import menData from "../Data/menData";
 import "../Style/men.css";
+
+let sortData;
+
 function HomeMen({searchText}) {
   const [data, setData] = useState(menData);
+  // const [dataAppend, setDataAppend] = useState(menData);
 
   useEffect(()=>{
     console.log(searchText)
@@ -13,6 +17,30 @@ function HomeMen({searchText}) {
       setData(menData.filter((elem) => elem.name == searchText))
     }
   },[searchText])
+
+  const Handlefiltermen = (e) => {
+    console.log(e.target.value);
+    let filterdata = e.target.value;
+
+    if (filterdata !== "") {
+      setData(menData.filter((elem) => elem.name === filterdata));
+    } else {
+      setData(menData);
+    }
+  };
+
+  const hadleh2l = (e) => {
+    console.log(e.target.value);
+    let sortdata = e.target.value;
+    console.log(data);
+    if (sortdata === "h2l") {
+      sortData = [...data].sort((a, b) => b.price - a.price);
+    } else {
+      sortData = [...data].sort((a, b) => a.price - b.price);
+    }
+    setData(sortData);
+  };
+
 
   const navigate = useNavigate();
   const handlefemale=()=>{
@@ -31,8 +59,8 @@ function HomeMen({searchText}) {
           Great holiday presents are part of our heritage.Here's our take...
         </p>
         <select className="for-her-him">
-          <option value="" onClick={handlemale}>For Him</option>
-          <option value=""onClick={handlefemale}>For Her</option>
+          <option value="" >For Him</option>
+          <option value="">For Her</option>
           <option value="">For Girls</option>
           <option value="">For Boys</option>
           <option value="">For the Home</option>
@@ -46,7 +74,7 @@ function HomeMen({searchText}) {
       <div className="j-filters-section">
         <div className="j-filters-section-filters">
           <div>
-            <select placeholder="Show Filters ">
+            <select placeholder="Show Filters " onChange={Handlefiltermen}>
               <option value="">Show Filters</option>
               <option value="sweater">Sweaters(10)</option>
               <option value="pant">Pants(5)</option>
@@ -58,7 +86,7 @@ function HomeMen({searchText}) {
             </select>
           </div>
           <div>
-            <select placeholder="Featured">
+            <select placeholder="Featured" onChange={hadleh2l}>
               <option value="">Featured</option>
               <option value="l2h">Price:Low-High</option>
               <option value="h2l">Price:High-Low</option>
