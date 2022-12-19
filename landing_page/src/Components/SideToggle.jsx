@@ -16,29 +16,25 @@ import { useState } from "react";
 function SideToggle() {
   const navigate = useNavigate();
 
-  function handleChange1() {
-    navigate("/signin");
-  }
+  
   function handleclick() {
     navigate("/signin");
   }
-  function handleclick1() {
-    navigate("/signup");
+  
+  function handlewomen() {
+    navigate("/homewomen");
   }
 
-  function handlehome() {
-    navigate("/");
-  }
-
-  function logout() {
+  function handleMen() {
     // localStorage.removeItem("user-info");
-    navigate("/signin");
+    navigate("./homemen");
   }
 
   return (
     <div>
       <Menu>
         <MenuButton
+       
           as={IconButton}
           aria-label="Options"
           icon={<HamburgerIcon />}
@@ -57,8 +53,9 @@ function SideToggle() {
               <button style={{ background: "rgb(15, 106, 97)",padding:"5px 70px",color:"white",fontSize:"15px",fontWeight:"600"}} >
                 SIGN IN
               </button>
+              
             </MenuItem>
-            <MenuItem>
+            <MenuItem  >
               <div
                 style={{
                   display: "flex",
@@ -84,7 +81,7 @@ function SideToggle() {
                 <span>{">"}</span>
               </div>
             </MenuItem>
-            <MenuItem>
+            <MenuItem onClick={handlewomen}>
               <div
                 style={{
                   display: "flex",
@@ -97,7 +94,7 @@ function SideToggle() {
                 <span>{">"}</span>
               </div>
             </MenuItem>
-            <MenuItem>
+            <MenuItem onClick={handleMen}>
               <div
                 style={{
                   display: "flex",

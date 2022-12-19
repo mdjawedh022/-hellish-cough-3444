@@ -4,12 +4,23 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { SearchIcon } from "@chakra-ui/icons";
 import SideToggle from "./SideToggle";
+import { useState } from "react";
 
-function Navbar() {
+function Navbar({searchText,setSearch}) {
+  let namedata = JSON.parse(localStorage.getItem("jawed_Signin"))
+  let isSignIn = JSON.parse(localStorage.getItem("isSignIn"))
+  const [name,setName]=useState(namedata)
+  const [isSign,setIsSignIn] =useState(isSignIn)
+  
   const navigate = useNavigate();
   const handleSignIn=()=>{
     navigate("/signin");
   }
+  const removeClick=()=>{
+    localStorage.removeItem("isSignIn")
+    setIsSignIn(JSON.parse(localStorage.getItem("isSignIn")))
+  }
+
   return (
     <div className="j-main-navbar-section">
       <div className="j-navbar">
@@ -60,15 +71,17 @@ function Navbar() {
         <div className="j-signIn-navbar">
           <div className="j-input-navbar">
             <SearchIcon />
-            <input type="text" placeholder="Search J.Crew" />
+            <input type="text" placeholder="Search J.Crew" value={searchText} onChange={(e)=>setSearch(e.target.value)} />
           </div>
           <div className="sigin-j-button">
-            <button onClick={handleSignIn}>Sign In</button>
+          {isSign ? <button onClick={removeClick}>{"Hi,"}{name.name}</button>:<button onClick={handleSignIn}>Sign In</button>}
+            
+            
           </div>
           <div>
-            <Link>
+            <Link to="/addbag">
               {" "}
-              <i class="fa-solid fa-bag-shopping"></i>
+              <i className="fa-solid fa-bag-shopping"></i>
             </Link>
           </div>
         </div>

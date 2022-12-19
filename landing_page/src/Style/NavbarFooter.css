@@ -40,6 +40,8 @@
 .j-product-navbar a:hover{
     /* border-bottom: 1px solid red; */
     padding-bottom: 20px;
+    text-decoration: underline;
+    color: red;
 }
 .j-input-navbar input{
     outline: none;
@@ -156,6 +158,9 @@ margin-top: 5px;
     font-weight: 550;
     margin-bottom: 5px;
 }
+.footer-write ul:hover{
+    text-decoration: underline;
+}
 /* .footer-write ul:hover{
 padding-top:2px ;
 } */
@@ -220,7 +225,7 @@ cursor: pointer;
             align-items: center;
         }
         .j-main-navbar-section{
-            margin-top:-1.8%;
+            margin-top:-0.5%;
         }
 }
 @media screen and (max-width:768px) {

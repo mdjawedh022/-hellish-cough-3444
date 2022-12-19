@@ -50,17 +50,18 @@ const Slider = () => {
 
   const breakPoints = [
     { width: 200, itemsToShow: 1, itemsToScroll: 1 },
-    { width: 400, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 400, itemsToShow: 1, itemsToScroll: 1 },
     { width: 500, itemsToShow: 2, itemsToScroll: 2 },
-    { width: 768, itemsToShow: 4, itemsToScroll: 3 },
+    { width: 768, itemsToShow: 3, itemsToScroll: 3 },
+    {width: 1150, itemsToShow: 4, itemsToScroll: 4 },
   ];
 
   return (
     <div className="j-slider">
       {
         <Carousel breakPoints={breakPoints}>
-          {data.map((item) => (
-            <div className="d_append_data">
+          {data.map((item,index) => (
+            <div className="d_append_data" key={index}>
               {/* <p>{item}</p> */}
               <div style={{ display: "flex" }}>
                 <img src={item.img} alt="" />

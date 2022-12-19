@@ -16,8 +16,12 @@ border-radius:4px ;
 }
 form select{
     border: 1px solid gray;
-padding: 7px 70px;
+padding: 7px 10px;
+width: 99%;
 margin-top: 15px;
+outline: none;
+border-radius:4px ;
+
 }
 .j-sign-form{
     border: 1px solid gray;
