@@ -112,8 +112,8 @@ function Landing() {
           <div className="j-collective-box1">
             {/* -------------------collective_section_1----------------------------------- */}
 
-            {collect.map((elem) => (
-              <div>
+            {collect.map((elem,index) => (
+              <div key={index}>
                 <img src={elem.img} alt="" />
                 <p>{elem.ptag}</p>
                 <h1>{elem.h1tag}</h1>
@@ -128,8 +128,8 @@ function Landing() {
               <h1 className="j-more">More Stories</h1>
             </div>
             <div className="j-stories-main">
-              {store.map((elem) => (
-                <div>
+              {store.map((elem,index) => (
+                <div key={index}>
                   <img src={elem.img} alt="" />
                   <h1>{elem.title}</h1>
                   <Link>{elem.link}</Link>
@@ -146,8 +146,8 @@ function Landing() {
             <h2 className="Love">You'll Also Love</h2>
           </div>
           <div className="j-love-section-main">
-            {love.map((elem) => (
-              <div>
+            {love.map((elem,index) => (
+              <div key={index}>
                 <img src={elem.img} alt="" />
               </div>
             ))}
@@ -171,8 +171,8 @@ function Landing() {
         <div className="j-see-more-main">
           <h1>More you need to see</h1>
           <div className="j-see-more-present">
-            {data.map((elem) => (
-              <div className="j-seeMore">
+            {data.map((elem,index) => (
+              <div className="j-seeMore" key={index}>
                 <img src={elem.img} alt="" />
                 <Link>{elem.title}</Link>
               </div>

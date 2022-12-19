@@ -53,6 +53,7 @@ function SideToggle() {
               <button style={{ background: "rgb(15, 106, 97)",padding:"5px 70px",color:"white",fontSize:"15px",fontWeight:"600"}} >
                 SIGN IN
               </button>
+              
             </MenuItem>
             <MenuItem  >
               <div

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Checkbox, CheckboxGroup } from "@chakra-ui/react";
+import { Checkbox } from "@chakra-ui/react";
 import "../Style/Sign.css";
 import { useState } from "react";
 function SignUp() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [signup, setsignup] = useState({});
   const handleChange = (e) => {
     setsignup({ ...signup, [e.target.name]: e.target.value });
@@ -12,12 +12,10 @@ function SignUp() {
   const handlesubmit = (e) => {
     e.preventDefault();
     console.log(signup);
-    localStorage.setItem("jawed_Signin",JSON.stringify(signup))
+    localStorage.setItem("jawed_Signin", JSON.stringify(signup));
+    navigate("/signin");
   };
 
-  const siginPage=()=>{
-    navigate("/signin")
-  }
   return (
     <div>
       <form onSubmit={handlesubmit}>
@@ -40,7 +38,7 @@ function SignUp() {
         <br />
 
         <input
-        required
+          required
           type="password"
           name="password"
           placeholder="password"
@@ -60,7 +58,12 @@ function SignUp() {
         <div className="j-remember-me">
           <Checkbox defaultChecked>Remember me</Checkbox>
         </div>
-        <input type="submit" className="j-sign-form" value="SIGN UP NOW " onClick={siginPage}/>
+        <input
+          type="submit"
+          className="j-sign-form"
+          value="SIGN UP NOW "
+          // onClick={siginPage}
+        />
         <p className="j-reCAPTCHA">
           By clicking "Create an Account", you agree to our Terms of Use and
           Privacy Policy, including the Use of Cookies and the transfer of your

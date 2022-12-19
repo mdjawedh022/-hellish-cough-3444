@@ -60,8 +60,8 @@ const Slider = () => {
     <div className="j-slider">
       {
         <Carousel breakPoints={breakPoints}>
-          {data.map((item) => (
-            <div className="d_append_data">
+          {data.map((item,index) => (
+            <div className="d_append_data" key={index}>
               {/* <p>{item}</p> */}
               <div style={{ display: "flex" }}>
                 <img src={item.img} alt="" />
