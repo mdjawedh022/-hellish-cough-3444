@@ -18,3 +18,10 @@ bascially this is E-commarce website, which sell different different type of men
 7.Checkout
 8.Payment
 9.Error page
+
+
+**Working**
+1.searching
+2.fitlering
+3.sorting
+4.responsive
