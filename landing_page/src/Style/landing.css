@@ -118,7 +118,7 @@
 .j-collective {
   background-color: #f8f4ef;
   width: 100%;
-  height: 1600px;
+  height: 1400px;
   padding-top: 20px;
 }
 .j-collective-box {
@@ -190,7 +190,7 @@
 .j-love-section {
   width: 90%;
   margin: 90px auto 0 auto;
-  height: 450px;
+  height: 400px;
   /* border: solid; */
 }
 .j-love-section-main {
@@ -272,15 +272,17 @@
   }
   .j-shop0 {
     text-align: center;
-    width: 90%;
+    width: 95%;
     margin: 50px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3,1fr);
     height: auto;
   }
   .j-shop1 {
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img1_new.jpg");
     background-size: cover;
+    
   }
   .j-shop2 {
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img2_new.jpg");
@@ -289,6 +291,7 @@
   .j-shop3 {
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img3.jpg");
     background-size: cover;
+    padding-bottom: 20px;
   }
   .j-shop4 {
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img4.jpg");
@@ -302,10 +305,60 @@
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img6.jpg");
     background-size: cover;
   }
+
+  .j-button{
+    width: 85%;
+    margin:20px auto;
+  }
+  .j-button h1{
+    font-size: 15px;
+  }
+  .j-button button{
+    padding: 7px 20px;
+  }
+  .j-collective-box{
+    width: 90%;
+  }
+.j-collective-box span {
+  /* font-weight: 700; */
+  margin-left:13%;
+  font-size: 10px;
+}
+.j-collective-box img{
+  width: 30%;
+}
+.j-collective {
+  width: 100%;
+  height:1300px;
+  padding-top: 10px;
+  /* border: solid; */
+}
+.j-collective-box1{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+}
+.j-stories-main {
+  width: 100%;
+  height: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.j-stories-main img {
+  width:90%;
+  margin: auto;
+}
+.j-stories-main>div{
+  /* border: solid; */
+  text-align: center;
+ 
+}
+
 }
 /* ------------------ */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 618px) {
   .j-banner {
     margin-top: 15px;
     width: 100%;
@@ -321,48 +374,99 @@
     display: none;
   }
 
-  .j-shop0 {
+  .j-shop {
     text-align: center;
-    width: 90%;
     margin: 50px auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: auto;
+    grid-template-columns: repeat(3,1fr);
   }
   .j-shop1 {
+   
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img1_new.jpg");
-    background-size: cover;
+    background-size:contain;
   }
   .j-shop2 {
+  
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img2_new.jpg");
     background-size: cover;
   }
   .j-shop3 {
+   
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img3.jpg");
     background-size: cover;
   }
   .j-shop4 {
+   
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img4.jpg");
     background-size: cover;
   }
   .j-shop5 {
+   
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img5.jpg");
     background-size: cover;
   }
   .j-shop6 {
+   
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img6.jpg");
     background-size: cover;
   }
+  .j-button{
+    width:80%;
+    margin: auto;
+    display: none;
+  }
+  .j-button button{
+ padding: 5px 15px;
+ font-size: 10px;
+  }
+  .j-button h1{
+    font-size: 12px;
+  }
+  .j-collective {
+    width: 100%;
+    height:2500px;
+    padding-top: 10px;
+    /* border: solid; */
+  }
+  .j-collective-box img{
+    width: 40%;
+  }
+  .j-collective-box span{
+    font-size: 10px;
+  }
+  .j-collective-box1{
+    width:40%;
+    margin-left: 40px;
+    height: 1300px;
+    display:inline-block;
+    border-top: none;
+  }
+  .j-collective-box1 div{
+margin: auto;
+/* border: solid; */
+width: 70%;
+text-align: center;
+height: 350px;
+  }
+  .j-collective-box1 img{
+    width:90%;
+    margin: auto;
+    height: 70%;
+  }
+  .j-stories-main ,.j-more{
+    display: none;
+  }
+
 }
 
 /* -------------------------- */
 
-@media screen and (max-width: 445px) {
+@media screen and (max-width: 465px) {
   .j-banner {
     margin-top: 15px;
     width: 100%;
   }
   .j-link-button-grid {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -376,12 +480,15 @@
     text-align: center;
     width: 90%;
     margin: 50px auto;
-    display:inline-block;
-    grid-template-columns: repeat(1, 1fr);
+    display:grid;
+    grid-template-columns: repeat(1, 1fr); 
     height: auto;
   }
+  /* .j-shop1, .j-shop2, .j-shop3, .j-shop4 .j-shop5, .j-shop6{
+    display:inline-block;
+  } */
   .j-shop1 {
-    background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img1_new.jpg");
+    /* background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img1_new.jpg"); */
     background-size: cover;
   }
   .j-shop2 {
@@ -404,4 +511,128 @@
     background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img6.jpg");
     background-size: cover;
   }
+  .j-love-section {
+    display: none;
+  }
+  .j-see-more-main
+  .j-see-more-present{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   grid-template-rows: repeat(6,1fr);
+  }
+  .j-landing-main{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1145px){
+.j-button h1{
+  font-size: 20px;
+}
+.j-button button{
+  padding: 8px 30px;
+}
+.j-button{
+  width: 85%;
+}
+.j-shop {
+  text-align: center;
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: auto;
+}
+.j-shop h1{
+  font-size: 25px;
+  /* margin-top: -10px; */
+}
+
+.j-shop1 {
+  background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img1_new.jpg");
+  background-size: cover;
+}
+.j-shop2 {
+  background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img2_new.jpg");
+  background-size: cover;
+}
+.j-shop3 {
+  background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img3.jpg");
+  background-size: cover;
+}
+.j-shop4 {
+  background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img4.jpg");
+  background-size: cover;
+}
+.j-shop5 {
+  background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img5.jpg");
+  background-size: cover;
+}
+.j-shop6 {
+  background-image: url("https://www.jcrew.com/brand_creative/homepage2022/15-Dec4/2022dec2_1213_hp_w_img6.jpg");
+  background-size: cover;
+}
+
+
+.j-collective {
+  background-color: #f8f4ef;
+  width: 100%;
+  height: 1400px;
+  padding-top: 20px;
+}
+.j-collective-box {
+  width: 85%;
+  margin: auto;
+  /* border: solid; */
+}
+.j-collective-box img{
+  width: 20%;
+}
+.j-collective-box span{
+  font-size: 15px;
+  margin-left:57%;
+}
+.j-collective-box1{
+  width: 85%;
+}
+.j-collective-box1 h1{
+  font-size: 20px;
+}
+.j-collective-box1 p{
+  font-size: 13px;
+}
+.j-collective-box1 a{
+  font-size: 12px;
+}
+.j-stories {
+  width: 85%;
+  margin: 20px auto;
+}
+
+.j-love-section {
+  width: 90%;
+  margin: 90px auto 0 auto;
+  height: 750px;
+  /* border: solid; */
+}
+.j-love-section-main {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.j-see-more-main {
+  width: 95%;
+  margin: 70px auto 30px auto;
+}
+.j-see-more-present {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.j-see-more-main h1{
+  font-size: 40px;
+}
 }

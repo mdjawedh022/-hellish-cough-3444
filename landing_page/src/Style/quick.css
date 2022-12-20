@@ -1,0 +1,94 @@
+.j-quickshop{
+    width:60%;
+    margin: auto;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+    box-shadow: rgba(186, 17, 17, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    padding: 20px;
+    /* gap:20px; */
+}
+.j-quickshop-img{
+    margin-right: 20px;
+}
+.j-quickshop-img img:hover{
+    padding: 5px;
+    box-shadow: rgba(186, 17, 17, 0.24) 0px 3px 8px;
+    /* border: solid; */
+    cursor: pointer;
+}
+.j-product-detail-p1{
+    font-size: 12px;
+    font-weight: 600;
+    color: gray;
+}
+.j-product-detail h2{
+    font-size:25px;
+}
+.j-reveiws{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.j-reveiws img{
+    width:20%;
+}
+.j-reveiws a{
+    text-decoration: underline;
+}
+.j-price-quick{
+    display: flex;
+    gap:10px;
+}
+.item-BM538{
+    font-size: 10px;
+    font-weight: 600;
+    color: gray;
+}
+.j-color-buuton-quick button:hover{
+   padding: 5px;
+   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.j-FINAL-SALE{
+    border: 1px solid gray;
+    /* display: flex; */
+    width:100%;
+}
+.j-button-add-to-bag{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    margin-top: 15px;
+}
+.j-button-add-to-bag button{
+ 
+    border: 1px gray solid;
+}
+.j-ADD-TO-BAG-button{
+    padding: 7px 130px;
+    color: white;
+    background-color: black;
+    font-weight: 600;
+}
+.j-fa-regular-icon{
+    padding: 6px 10px;
+}
+@media screen and (max-width:786px){
+    .j-quickshop{
+        width: 90%;
+        margin-left:5%;
+        display:inline-block;
+    }
+    .j-product-detail{
+       
+    }
+    .j-quickshop-img{
+        width: 100%;
+        margin: auto;
+    }
+    .j-quickshop-img img{
+       
+        width: 100%;
+       
+    }
+}

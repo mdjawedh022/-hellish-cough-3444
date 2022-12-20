@@ -1,0 +1,12 @@
+.checkout-jj{
+    width: 40%;
+    /* border: solid; */
+    border-radius: 5px;
+
+}
+ .j-div-checkout{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px
+ }
