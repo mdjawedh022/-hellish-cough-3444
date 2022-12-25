@@ -6,7 +6,7 @@ import womenData from "../Data/womenData";
 import "../Style/men.css";
 let sortData;
 // let data;``
-let arr = JSON.parse(localStorage.getItem("save_quick")) || [];
+// let arr = JSON.parse(localStorage.getItem("save_quick")) || [];
 function HomeWomen({ searchText }) {
   const navigate = useNavigate();
   const [dataAppend, setDataAppend] = useState(womenData);
@@ -49,9 +49,9 @@ function HomeWomen({ searchText }) {
 
   // ------------------
   const handlesave = (item) => {
-    console.log(arr)
-    arr.push(item);
-    localStorage.setItem("save_quick", JSON.stringify(arr));
+    // console.log(arr)
+    // arr.push(item);
+    localStorage.setItem("save_quick", JSON.stringify(item));
     navigate("/quickshop");
     alert("add cart succseful");
   };

@@ -1,6 +1,6 @@
 # -hellish-cough-3444
 I am Jawed Hussain and this project is solo.
-bascially this is E-commarce website, which sell different different type of men, women and Home related product.
+bascially this is E-commarce website, which selling different different type of men, women and Home related products.
 
 **Tech Stack**
 1.React.JS

@@ -20,29 +20,29 @@ function QuickShop() {
 
 
   const handlecartsection=(item)=>{
-    arr.push(item);
+    let newItem = {...item, qty:1}
+    arr.push(newItem);
     localStorage.setItem("save", JSON.stringify(arr));
     // navigate("/addbag");
   }
   return (
     <>
       <div>
-       {get_addcart.map((elem,index)=>{
-        return  <div key={index}  className="j-quickshop">
+        <div  className="j-quickshop">
         <div className="j-quickshop-img">
-          <img src={elem.img} />
+          <img src={get_addcart.img} />
         </div>
         <div className="j-product-detail">
-          <p className="j-product-detail-p1">{elem.badge}</p>
+          <p className="j-product-detail-p1">{get_addcart.badge}</p>
           <br />
-          <h2>{elem.title}</h2>
+          <h2>{get_addcart.title}</h2>
           <p className="item-BM538">item BM538</p>
           <br />
           <div className="j-price-quick">
             {" "}
-            <p style={{ textDecoration: "line-through" }}>{elem.orPrice}</p>
-            <p>INR {elem.price}</p>
-            <p>{elem.tile__detail}</p>
+            <p style={{ textDecoration: "line-through" }}>{get_addcart.orPrice}</p>
+            <p>INR {get_addcart.price}</p>
+            <p>{get_addcart.tile__detail}</p>
           </div>
           <div className="j-reveiws">
             {" "}
@@ -144,14 +144,13 @@ function QuickShop() {
             </Accordion>
           </div>
           <div className="j-button-add-to-bag">
-            <button className="j-ADD-TO-BAG-button"  onClick={() => handlecartsection(elem)}>ADD TO BAG</button>
+            <button className="j-ADD-TO-BAG-button"  onClick={() => handlecartsection(get_addcart)}>ADD TO BAG</button>
             <button className="j-fa-regular-icon">
               <i className="fa-regular fa-heart"></i>
             </button>
           </div>
         </div>
       </div>
-       })}
       </div>
     </>
   );

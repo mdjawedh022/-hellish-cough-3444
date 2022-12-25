@@ -8,6 +8,13 @@ grid-template-columns:repeat(3,1fr) ;
   /* border: solid; */
    
 }
+.j-j-addcart-section{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  gap:20px;
+  align-items: center;
+}
 .j-SHOPPING-BAG{
   display: flex;
   justify-content: space-between;
@@ -24,14 +31,14 @@ border-radius: 5px;
   font-weight: 600;
   padding: 5px;
 }
-.j-addcart-section{
+/* .j-addcart-section{
     width:80% ;
     height: auto;
     display: flex;
     margin: auto;
     gap: 30px;
    
-}
+} */
 .j-add-product-cart-img{
   padding: 10px;
 width: 70%;
