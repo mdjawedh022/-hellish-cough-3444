@@ -18,139 +18,150 @@ function QuickShop() {
   const get_addcart = JSON.parse(localStorage.getItem("save_quick"));
   console.log(get_addcart);
 
-
-  const handlecartsection=(item)=>{
-    let newItem = {...item, qty:1}
-    arr.push(newItem);
+  const handlecartsection = (item) => {
+    let isExist = arr.filter((elem) => elem.id == item.id);
+    if (isExist.length != 0) {
+      arr.map((elem) => elem.id == item.id && elem.qty++);
+    } else {
+      let newItem = { ...item, qty: 1 };
+      arr.push(newItem);
+    }
     localStorage.setItem("save", JSON.stringify(arr));
     // navigate("/addbag");
-  }
+  };
   return (
     <>
       <div>
-        <div  className="j-quickshop">
-        <div className="j-quickshop-img">
-          <img src={get_addcart.img} />
-        </div>
-        <div className="j-product-detail">
-          <p className="j-product-detail-p1">{get_addcart.badge}</p>
-          <br />
-          <h2>{get_addcart.title}</h2>
-          <p className="item-BM538">item BM538</p>
-          <br />
-          <div className="j-price-quick">
-            {" "}
-            <p style={{ textDecoration: "line-through" }}>{get_addcart.orPrice}</p>
-            <p>INR {get_addcart.price}</p>
-            <p>{get_addcart.tile__detail}</p>
+        <div className="j-quickshop">
+          <div className="j-quickshop-img">
+            <img src={get_addcart.img} />
           </div>
-          <div className="j-reveiws">
-            {" "}
-            <img
-              src="https://jcrew.ugc.bazaarvoice.com/1706redes-en_us/3_6/5/rating.png"
-              alt=""
-            />
-            <Link>18 REVIEWS</Link>{" "}
-          </div>
-          <div className="j-color-quick">
+          <div className="j-product-detail">
+            <p className="j-product-detail-p1">{get_addcart.badge}</p>
+            <br />
+            <h2>{get_addcart.title}</h2>
+            <p className="item-BM538">item BM538</p>
+            <br />
+            <div className="j-price-quick">
+              {" "}
+              <p style={{ textDecoration: "line-through" }}>
+                {get_addcart.orPrice}
+              </p>
+              <p>INR {get_addcart.price}</p>
+              <p>{get_addcart.tile__detail}</p>
+            </div>
+            <div className="j-reveiws">
+              {" "}
+              <img
+                src="https://jcrew.ugc.bazaarvoice.com/1706redes-en_us/3_6/5/rating.png"
+                alt=""
+              />
+              <Link>18 REVIEWS</Link>{" "}
+            </div>
+            <div className="j-color-quick">
+              <div>
+                <p>Color</p>
+              </div>
+              <div className="j-color-buuton-quick">
+                <button
+                  style={{
+                    background: "pink",
+                    padding: "15px",
+                    borderRadius: "50%",
+                    marginLeft: "10px",
+                  }}
+                ></button>
+                <button
+                  style={{
+                    background: "red",
+                    padding: "15px",
+                    borderRadius: "50%",
+                    marginLeft: "10px",
+                  }}
+                ></button>
+                <button
+                  style={{
+                    background: "black",
+                    padding: "15px",
+                    borderRadius: "50%",
+                    marginLeft: "10px",
+                  }}
+                ></button>
+                <button
+                  style={{
+                    background: "darkgreen",
+                    padding: "15px",
+                    borderRadius: "50%",
+                    marginLeft: "10px",
+                  }}
+                ></button>
+              </div>
+            </div>
+            <p>Prices include duties and taxes.</p>
+            <div className="j-FINAL-SALE">
+              <p style={{ color: "darkred", fontWeight: "bold" }}>
+                FINAL SALE:
+              </p>
+              <span>
+                black, size one size is available but cannot be exchanged or
+                returned. Valid while supplies last. All sales final
+              </span>
+            </div>
             <div>
-              <p>Color</p>
-            </div>
-            <div className="j-color-buuton-quick">
-              <button
-                style={{
-                  background: "pink",
-                  padding: "15px",
-                  borderRadius: "50%",
-                  marginLeft: "10px",
-                }}
-              ></button>
-              <button
-                style={{
-                  background: "red",
-                  padding: "15px",
-                  borderRadius: "50%",
-                  marginLeft: "10px",
-                }}
-              ></button>
-              <button
-                style={{
-                  background: "black",
-                  padding: "15px",
-                  borderRadius: "50%",
-                  marginLeft: "10px",
-                }}
-              ></button>
-              <button
-                style={{
-                  background: "darkgreen",
-                  padding: "15px",
-                  borderRadius: "50%",
-                  marginLeft: "10px",
-                }}
-              ></button>
-            </div>
-          </div>
-          <p>Prices include duties and taxes.</p>
-          <div className="j-FINAL-SALE">
-            <p style={{ color: "darkred", fontWeight: "bold" }}>
-              FINAL SALE:
-            </p>
-            <span>
-              black, size one size is available but cannot be exchanged or
-              returned. Valid while supplies last. All sales final
-            </span>
-          </div>
-          <div>
-            <Accordion allowToggle>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box as="span" flex="1" textAlign="left">
-                      Size&Fit
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  <li>Body Length 23".</li>
-                </AccordionPanel>
-              </AccordionItem>
-            </Accordion>
-            <Accordion allowToggle>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box as="span" flex="1" textAlign="left">
-                      Product Details
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  <ul>
-                    {" "}
-                    A twist on the classic T-shirt, thanks to sweet,
-                    puff-sleeve details and a long-sleeve silhouette.
-                  </ul>
+              <Accordion allowToggle>
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton>
+                      <Box as="span" flex="1" textAlign="left">
+                        Size&Fit
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4}>
+                    <li>Body Length 23".</li>
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+              <Accordion allowToggle>
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton>
+                      <Box as="span" flex="1" textAlign="left">
+                        Product Details
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4}>
+                    <ul>
+                      {" "}
+                      A twist on the classic T-shirt, thanks to sweet,
+                      puff-sleeve details and a long-sleeve silhouette.
+                    </ul>
 
-                  <li>100% cotton.</li>
-                  <li>Machine wash.</li>
-                  <li>Import.</li>
-                  <li>Select stores.</li>
-                  <li>Item BP019.</li>
-                </AccordionPanel>
-              </AccordionItem>
-            </Accordion>
-          </div>
-          <div className="j-button-add-to-bag">
-            <button className="j-ADD-TO-BAG-button"  onClick={() => handlecartsection(get_addcart)}>ADD TO BAG</button>
-            <button className="j-fa-regular-icon">
-              <i className="fa-regular fa-heart"></i>
-            </button>
+                    <li>100% cotton.</li>
+                    <li>Machine wash.</li>
+                    <li>Import.</li>
+                    <li>Select stores.</li>
+                    <li>Item BP019.</li>
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+            </div>
+            <div className="j-button-add-to-bag">
+              <button
+                className="j-ADD-TO-BAG-button"
+                onClick={() => handlecartsection(get_addcart)}
+              >
+                ADD TO BAG
+              </button>
+              <button className="j-fa-regular-icon">
+                <i className="fa-regular fa-heart"></i>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </>
   );

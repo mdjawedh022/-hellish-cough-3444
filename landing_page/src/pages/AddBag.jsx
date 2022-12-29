@@ -10,14 +10,20 @@ function AddBag() {
   const handlesub = () => {
     setSate(state - 1);
   };
-
-  const handleplus = () => {
-    setSate(state + 1);
-  };
   let save = JSON.parse(localStorage.getItem("save"));
+
+  
+
+  const handleQty=(id,value)=>{
+    console.log(id,value)
+    let updatedData = save.map((elem)=>elem.id==id?{...elem, qty:elem.qty+value}:elem);
+    localStorage.setItem("save", JSON.stringify(updatedData));
+    save=updatedData;
+  }
+
   // console.log(save);
   useEffect(()=>{
-    setTotal(save.reduce((acc,elem)=>acc+elem.price,0))
+    setTotal(save.reduce((acc,elem)=>acc+elem.price*elem.qty,0))
   },[save])
 
   const handleremove = (index) => {
@@ -67,11 +73,9 @@ function AddBag() {
                 </div>
                 <div className="j-add-product-cart-inc-des">
                   <div className="j-add-product-cart-inc-des-btn">
-                    <button disabled={state === 1} onClick={handlesub}>
-                      -
-                    </button>
-                    <p>{state}</p>
-                    <button onClick={handleplus}>+</button>
+                    <button disabled={state == 1} onClick={()=>handleQty(elem.id,-1)}>-</button>
+                    <p>{elem.qty}</p>
+                    <button onClick={()=>handleQty(elem.id,1)}>+</button>
                   </div>
                   <button
                     style={{ color: "red" }}
@@ -87,11 +91,7 @@ function AddBag() {
       </div>
       <div className="j-add-product-checkout">
           <div className="j-Item-Price">
-            <p>Item Price</p>
-            <p>
-              {"INR "}
-              price
-            </p>
+            
           </div>
           <div className="j-total-Price">
             <p>Total Price</p>
