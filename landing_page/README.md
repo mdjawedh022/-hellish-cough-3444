@@ -21,7 +21,7 @@ bascially this is E-commarce website, which selling different different type of 
 <!-- <img scr={j.Crew.png}/>
  -->
 
-<img src="j.Crew.png"/>
+<img src={j.Creww.png} />
 
 **Working**
 1.searching
