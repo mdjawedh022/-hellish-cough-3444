@@ -18,8 +18,10 @@ bascially this is E-commarce website, which selling different different type of 
 7.Checkout
 8.Payment
 9.Error page
-<img scr={j.Crew.png}/>
+<!-- <img scr={j.Crew.png}/>
+ -->
 
+<img src="j.Crew.png"/>
 
 **Working**
 1.searching
