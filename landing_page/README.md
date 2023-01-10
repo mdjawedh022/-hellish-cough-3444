@@ -18,7 +18,7 @@ bascially this is E-commarce website, which selling different different type of 
 7.Checkout
 8.Payment
 9.Error page
-src="J.Crew.png"
+<img scr={j.Crew.png}/>
 
 
 **Working**
